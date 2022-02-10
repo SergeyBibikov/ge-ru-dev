@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 68, 253, 1) 100%);
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #alphabetContent {
@@ -12,12 +12,18 @@
     color: #FBFBFF;
 }
 
-tbody .ge{
-    color: #FFCB77 ;
+#alphabetContent td{
+    font-size: 2rem;
 }
-tbody .letterName{
-    color: #84C7D0 ;
+
+tbody .ge {
+    color: #FFCB77;
 }
-tbody .ru{
-    color: #B6D094 ;
+
+tbody .letterName {
+    color: #84C7D0;
+}
+
+tbody .ru {
+    color: #B6D094;
 }
