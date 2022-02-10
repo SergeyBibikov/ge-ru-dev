@@ -1,4 +1,5 @@
-#words {
+.wordList {
     display: grid;
-    background-color: #f0810f;
+    row-gap: 5px;
+    justify-items: center;
 }

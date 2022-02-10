@@ -1,0 +1,10 @@
+#words .word{
+    width: 90%;
+    border-radius: 4px;
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px;
+    justify-items: center;
+    align-items: center;
+}

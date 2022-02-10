@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+:root{
+  --font:calc(10px + 2vmin); 
+}
+
 body {
-  font-size: calc(10px + 2vmin);
+  font-size: var(--font);
   background-color: #063852;
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -27,6 +31,13 @@ body {
   color: #FBFBFF;
 }
 
+#header li{
+  transition-duration: .5s;
+  font-size: 0px;
+}
+#header li::first-letter{
+  font-size: var(--font);
+}
 #header li:hover {
   color: #f0810f;
 }
@@ -42,4 +53,10 @@ main{
 .section-wrapper{
   height: calc(100vh - 4rem);
   margin-top: 4rem;
+}
+
+@media (min-width: 500px) {
+  #header li{
+    font-size: var(--font);
+  }
 }
