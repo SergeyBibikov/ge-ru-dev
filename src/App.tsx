@@ -15,7 +15,7 @@ export function App() {
   
   return (
     <div className="App">
-      <Header {...state} visHandler={setVisibility}/>
+      <Header currentState={state} defaults={defaultState} visHandler={setVisibility}/>
       <Main {...state}/>
     </div>
   );

@@ -2,14 +2,12 @@ import React from 'react';
 
 export function Header(props: any) {
     const toggleVisibility = (t: string) => {
-        console.log("Init state", props);
-        let newState = Object.assign({},props);
-        if (props[t] === "dontShow") {
+        let newState = {...props.defaults};
+        if (props.currentState[t] === "dontShow") {
             newState[t] = "";
         } else {
             newState[t] = "dontShow";
         }
-        console.log("New state",newState);
         props.visHandler(newState);
     }
     return (
