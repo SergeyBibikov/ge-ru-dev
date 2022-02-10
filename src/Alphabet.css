@@ -1,0 +1,23 @@
+#alphabet.section-content {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 68, 253, 1) 100%);
+}
+
+#alphabetContent {
+    width: 80%;
+    text-align: center;
+    color: #FBFBFF;
+}
+
+.ge{
+    color: #FFCB77 ;
+}
+.letterName{
+    color: #84C7D0 ;
+}
+.ru{
+    color: #B6D094 ;
+}

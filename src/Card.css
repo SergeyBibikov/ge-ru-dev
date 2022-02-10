@@ -1,0 +1,28 @@
+.card{
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    background-color: #FBFBFF;
+    border-radius: 2%;
+    color: #063852;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    perspective: 10px;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
+.face, .shirt{
+    font-size: 2.5rem;
+    position: absolute;
+    backface-visibility: hidden;
+}
+.card .shirt{
+    transform: rotateY(180deg);
+}
