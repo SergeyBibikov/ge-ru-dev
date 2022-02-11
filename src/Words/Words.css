@@ -1,5 +1,39 @@
+.words{
+    background-color: #6f1a07;
+}
 .wordList {
     display: grid;
     row-gap: 5px;
     justify-items: center;
 }
+
+#filters{
+    color:#FBFBFF;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+div.langDirection{
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+div.wordSearch{
+    width: 50%;
+}
+
+div.wordSearch input{
+    width: 100%;
+    border:0;
+    border-bottom:2px solid #DDF093;
+    background: transparent;
+}
+
+div.wordSearch input:focus{ 
+    border:none;	
+    outline:none;
+    border-bottom:2px solid #34E4EA;
+   }

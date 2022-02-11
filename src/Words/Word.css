@@ -1,7 +1,7 @@
 #words .word{
     width: 90%;
     border-radius: 4px;
-    background-color: antiquewhite;
+    background-color: #F4FFFD;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px;
