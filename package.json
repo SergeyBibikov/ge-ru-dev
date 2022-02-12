@@ -20,6 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "b_c": "react-scripts build && ./copy_build.sh",
+    "b_c_w": "react-scripts build && copy_build.bat",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
