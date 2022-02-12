@@ -3,7 +3,7 @@
     border-radius: 4px;
     background-color: #F4FFFD;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50px;
     justify-items: center;
     align-items: center;

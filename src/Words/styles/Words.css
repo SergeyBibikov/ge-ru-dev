@@ -22,18 +22,26 @@ div.langDirection{
 }
 
 div.wordSearch{
-    width: 50%;
+    max-width: 90%;
 }
 
-div.wordSearch input{
+div.wordSearch form{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+}
+
+div.wordSearch input[type="text"]{
     width: 100%;
+    font-size: calc(10px + 2vmin);
+    padding: 0;
     border:0;
     border-bottom:2px solid #DDF093;
     background: transparent;
 }
 
-div.wordSearch input:focus{ 
+div.wordSearch input[type="text"]:focus{ 
     border:none;	
     outline:none;
+    caret-color: #FBFBFF;
     border-bottom:2px solid #34E4EA;
    }
