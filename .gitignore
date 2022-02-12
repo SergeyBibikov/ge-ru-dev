@@ -10,6 +10,7 @@
 
 # production
 /build
+copy_build.sh
 
 # misc
 .DS_Store
