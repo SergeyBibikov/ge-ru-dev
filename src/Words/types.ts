@@ -1,11 +1,13 @@
 
 export enum Category{
     Time = 1,
+    Number,
 }
 
 export enum PartOfSpeech{
     Noun = 1,
-    Verb = 2,
+    Verb,
+    Numeric,
 }
 
 export class WordData {
@@ -26,6 +28,8 @@ export class WordData {
         switch(this.category){
             case 1:
                 return "Время"
+            case 2:
+                return "Числа"
         }
     }
 }
