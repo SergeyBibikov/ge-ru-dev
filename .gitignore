@@ -11,6 +11,7 @@
 # production
 /build
 copy_build.sh
+copy_build.bat
 
 # misc
 .DS_Store
