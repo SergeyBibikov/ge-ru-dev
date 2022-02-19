@@ -1,7 +1,7 @@
 
 export enum Category{
-    Time = 1,
-    Number,
+    Time = "Время",
+    Number = "Числа",
 }
 
 export enum PartOfSpeech{
@@ -20,17 +20,6 @@ export class WordData {
     }
     getPartOfSpeechName(){
         return PartOfSpeech[this.partOfSpeech];
-    }
-    getCategoryName(){
-        return Category[this.category];
-    }
-    getCategoryNameRu(){
-        switch(this.category){
-            case 1:
-                return "Время"
-            case 2:
-                return "Числа"
-        }
     }
 }
 

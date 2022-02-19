@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './styles/Words.css';
 import { Word } from './Word';
-import { WordData } from "./types";
+import { CategorySelect } from './CategorySelect';
+import { WordData, Category } from "./types";
 import { getWords } from './helpers';
 
 export function Words(props: any) {
@@ -20,39 +21,51 @@ export function Words(props: any) {
             left = w.georgian;
             right = w.russian;
         }
-        return <Word left={left} right={right} category={w.getCategoryNameRu()} />
+        return <Word key={left} left={left} right={right} category={w.category} />
     }
     const findWord = () => {
         const a: HTMLInputElement | null = document.querySelector('[name="findWord"]');
-        const wordToFind = a?.value;
-        const result = allWords.find(a => a.russian === wordToFind || a.georgian === wordToFind);
-        result ? newWordlist([result]) : newWordlist([])
+        const wordToFind = a?.value || "";
+        const cat = (document.querySelector('select#categories') as HTMLSelectElement).value;
+        const result = allWords
+        .filter(word => { 
+            if (cat) {
+                if (word.category !== cat) {
+                    return false
+                }
+            }
+            return word.russian.includes(wordToFind) || word.georgian.includes(wordToFind)
+        });
+        newWordlist(result)
     }
+
     return (
         <div className={`words section-wrapper ${props.isShown}`}>
             <div id="words" className={`section-content ${props.isShown}`}>
-                <div id='filters'>
-                    <div className="langDirection">
-                        <div className='geru'>
-                            <label htmlFor="ge-ru">GE-RU</label>
-                            <input onChange={_ => { newDirection("GERU") }}
-                                value="GERU" type="radio" name='langDirection' defaultChecked id="ge-ru" />
+                <div className="filters-wrapper">
+                    <div id='filters'>
+                        <div className="lang-direction">
+                            <div className='geru'>
+                                <label htmlFor="ge-ru">GE-RU</label>
+                                <input onChange={_ => { newDirection("GERU") }}
+                                    value="GERU" type="radio" name='lang-direction' defaultChecked id="ge-ru" />
+                            </div>
+                            <div className='ruge'>
+                                <label htmlFor="ru-ge">RU-GE</label>
+                                <input onChange={_ => { newDirection("RUGE") }}
+                                    value="RUGE" type="radio" name='lang-direction' id="ru-ge" />
+                            </div>
                         </div>
-                        <div className='ruge'>
-                            <label htmlFor="ru-ge">RU-GE</label>
-                            <input onChange={_ => { newDirection("RUGE") }}
-                                value="RUGE" type="radio" name='langDirection' id="ru-ge" />
+                        <CategorySelect/>
+                        <div className="word-search">
+                            <form onSubmit={e=> e.preventDefault()}>
+                                <input type="text" name='findWord' />
+                                <input type="submit" value="Найти" onClick={e => {e.preventDefault();findWord()}}/>
+                            </form>
                         </div>
-                    </div>
-                    <div className="wordSearch">
-                        <form onSubmit={e=> e.preventDefault()}>
-                            <input type="text" name='findWord' />
-                            <input type="submit" value="Найти" onClick={e => {e.preventDefault();findWord()}}/>
-                            <input type="submit" value="Показать все" onClick={e => newWordlist(allWords)}/>
-                        </form>
                     </div>
                 </div>
-                <div className='wordList'>
+                <div className='word-list'>
                     {currentWordlist.map(w => renderWord(currentDirection, w))}
                 </div>
             </div>

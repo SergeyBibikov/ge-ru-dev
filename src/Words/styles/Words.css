@@ -1,47 +1,56 @@
 #words.section-content{
     background-color: #6f1a07;
 }
-.wordList {
+.word-list {
     display: grid;
     row-gap: 5px;
     justify-items: center;
 }
 
-#filters{
-    color:#FBFBFF;
+.filters-wrapper{
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
+    /* grid-template-columns: 1fr; */
+    justify-content: center;
+}
+#filters{
+    width: fit-content;
+    color:#FBFBFF;
+
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
     margin-bottom: 10px;
     padding-top: 10px;
 }
-div.langDirection{
-    width: 50%;
+
+div.lang-direction{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-
-div.wordSearch{
-    max-width: 90%;
+.ruge{
+    text-align: end;
 }
 
-div.wordSearch form{
+div.word-search form, .category-select-wrapper{
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-columns: 3fr 1fr;
 }
 
-div.wordSearch input[type="text"]{
+div.word-search input[type="text"]{
     width: 100%;
     font-size: calc(10px + 2vmin);
+    text-align: center;
+    color: #FBFBFF;
     padding: 0;
     border:0;
     border-bottom:2px solid #DDF093;
     background: transparent;
 }
 
-div.wordSearch input[type="text"]:focus{ 
+div.word-search input[type="text"]:focus{ 
     border:none;	
     outline:none;
     caret-color: #FBFBFF;
     border-bottom:2px solid #34E4EA;
-   }
+}
