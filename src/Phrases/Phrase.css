@@ -1,0 +1,13 @@
+.phrase{
+    display: grid;
+    background-color: aliceblue;
+    grid-template-rows: 1fr 2fr 2fr;
+    text-align: center;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+}
+.phrase .category{
+    font-size: calc(10px + 1vmin);
+    text-align: end;
+}

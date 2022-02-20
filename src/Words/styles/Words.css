@@ -30,12 +30,12 @@ div.lang-direction{
     text-align: end;
 }
 
-div.word-search form, .category-select-wrapper{
+div.string-search form, .category-select-wrapper{
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
 
-div.word-search input[type="text"]{
+div.string-search input[type="text"]{
     width: 100%;
     font-size: calc(10px + 2vmin);
     text-align: center;
@@ -46,7 +46,7 @@ div.word-search input[type="text"]{
     background: transparent;
 }
 
-div.word-search input[type="text"]:focus{ 
+div.string-search input[type="text"]:focus{ 
     border:none;	
     outline:none;
     caret-color: #FBFBFF;

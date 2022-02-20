@@ -3,7 +3,7 @@ import './Alphabet.css';
 
 export function Alphabet(props: any) {
     return (
-        <div className={`section-wrapper ${props.isShown}`}>
+        <div className={`alphabet section-wrapper ${props.isShown}`}>
             <div id="alphabet" className={`section-content ${props.isShown}`}>
                 <table id="alphabetContent">
                     <tbody>

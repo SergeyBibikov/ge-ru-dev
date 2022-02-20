@@ -29,5 +29,3 @@ export const allWords: WordData[] = [
     new WordData("1000", "ათასი", "1", "ათასი", WordCategory.Number, PartOfSpeech.Numeric),
 
 ]
-export const verbs: WordData[] = [
-];

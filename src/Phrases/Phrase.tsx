@@ -1,4 +1,5 @@
 import React from 'react';
+import './Phrase.css';
 
 export function Phrase(props: any) {
     return (

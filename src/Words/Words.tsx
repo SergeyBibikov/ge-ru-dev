@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './styles/Words.css';
 import { Word } from './Word';
-import { CategorySelect } from './CategorySelect';
-import { WordData } from "../types";
+import { CategorySelect } from '../CategorySelect';
+import { StringSearch } from '../StringSearch';
+import { WordCategory, WordData } from "../types";
 import { getWords } from './helpers';
 
 export function Words(props: any) {
@@ -23,21 +24,6 @@ export function Words(props: any) {
         }
         return <Word key={left} left={left} right={right} category={w.category} />
     }
-    const findWord = () => {
-        const a: HTMLInputElement | null = document.querySelector('[name="findWord"]');
-        const wordToFind = a?.value || "";
-        const cat = (document.querySelector('select#categories') as HTMLSelectElement).value;
-        const result = allWords
-        .filter(word => { 
-            if (cat) {
-                if (word.category !== cat) {
-                    return false
-                }
-            }
-            return word.russian.includes(wordToFind) || word.georgian.includes(wordToFind)
-        });
-        newWordlist(result)
-    }
 
     return (
         <div className={`words section-wrapper ${props.isShown}`}>
@@ -56,13 +42,8 @@ export function Words(props: any) {
                                     value="RUGE" type="radio" name='lang-direction' id="ru-ge" />
                             </div>
                         </div>
-                        <CategorySelect/>
-                        <div className="word-search">
-                            <form onSubmit={e=> e.preventDefault()}>
-                                <input type="text" name='findWord' />
-                                <input type="submit" value="Найти" onClick={e => {e.preventDefault();findWord()}}/>
-                            </form>
-                        </div>
+                        <CategorySelect categories={WordCategory}/>
+                        <StringSearch section={"words"} arr={allWords} f={newWordlist}/>
                     </div>
                 </div>
                 <div className='word-list'>

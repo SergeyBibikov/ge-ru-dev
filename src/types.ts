@@ -31,7 +31,7 @@ export class WordData {
 export class PhraseData {
     constructor(public russian: string,
         public georgian: string,
-        public category: WordCategory
+        public category: PhraseCategory
         ){
     }
 }

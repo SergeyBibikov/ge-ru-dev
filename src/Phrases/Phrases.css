@@ -1,0 +1,15 @@
+.phrases.section-wrapper, #phrases.section-content{
+    background-color: #FFD449;
+}
+
+#phrases.section-content{
+    display: grid;
+    justify-items: center;
+    row-gap: 10px;
+}
+
+.phrases-filters{
+    display: grid;
+    justify-items: center;
+    margin-bottom: 10px;
+}
