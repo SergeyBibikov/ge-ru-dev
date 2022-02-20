@@ -1,4 +1,4 @@
-#words.section-content{
+.words.section-wrapper, #words.section-content{
     background-color: #6f1a07;
 }
 .word-list {
@@ -9,7 +9,6 @@
 
 .filters-wrapper{
     display: grid;
-    /* grid-template-columns: 1fr; */
     justify-content: center;
 }
 #filters{
@@ -17,7 +16,6 @@
     color:#FBFBFF;
 
     display: grid;
-    /* grid-template-columns: 1fr 1fr; */
     grid-template-rows: 1fr 1fr 1fr;
     justify-content: center;
     margin-bottom: 10px;

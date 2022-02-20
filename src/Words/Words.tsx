@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './styles/Words.css';
 import { Word } from './Word';
 import { CategorySelect } from './CategorySelect';
-import { WordData, Category } from "./types";
+import { WordData } from "../types";
 import { getWords } from './helpers';
 
 export function Words(props: any) {

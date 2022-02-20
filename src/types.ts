@@ -1,7 +1,12 @@
 
-export enum Category{
+export enum WordCategory{
     Time = "Время",
     Number = "Числа",
+}
+
+export enum PhraseCategory{
+    Greeting = "Приветствие",
+    Farewell = "Прощание",
 }
 
 export enum PartOfSpeech{
@@ -15,7 +20,7 @@ export class WordData {
         public georgian: string,
         public firstLetterRu: string,
         public firstLetterGe: string,
-        public category: Category,
+        public category: WordCategory,
         public partOfSpeech: PartOfSpeech){
     }
     getPartOfSpeechName(){
@@ -23,3 +28,10 @@ export class WordData {
     }
 }
 
+export class PhraseData {
+    constructor(public russian: string,
+        public georgian: string,
+        public category: WordCategory
+        ){
+    }
+}
