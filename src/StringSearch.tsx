@@ -5,7 +5,6 @@ type F = (a: any[]) => void;
 const findWord = (section: string, arr:any[], f:F) => {
     const a: HTMLInputElement | null = document.querySelector(`.${section} [name="findString"]`);
     const wordToFind = a?.value || "";
-    //TODO:потенциально нужно обработать отсутствие категорий
     const cat = (document.querySelector(`.${section} select#categories`) as HTMLSelectElement).value;
     const result = arr
     .filter(word => { 
